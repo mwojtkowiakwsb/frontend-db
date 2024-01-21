@@ -1,0 +1,43 @@
+.modalClass {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: grid !important;
+    place-items: center;
+    color: black;
+}
+
+.backdropClass {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: black;
+}
+
+.dialogClass {
+    display: grid;
+    place-items: center;
+}
+
+.contentClass {
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+.bodyClass {
+    display: grid;
+    place-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footerClass {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.labelClass {
+    font-size: 12px
+}
