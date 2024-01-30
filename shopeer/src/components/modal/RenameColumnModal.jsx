@@ -34,7 +34,7 @@ const RenameColumnName = ({ show, handleClose, setRows }) => {
       <Modal.Body className="bodyClass">
         <h4>Change column name</h4>
         <Form onSubmit={handleSubmit}>
-        <Form.Label htmlFor="column" className="labelClass">Old column name</Form.Label>
+        <Form.Label htmlFor="column" className="labelClass">Old column name.</Form.Label>
             <FormGroup>
               <Form.Control key="oldColumn" name="oldColumn" id="column" value={oldColumnName} onChange={(e) => setOldColumnName(e.target.value)} type="text" placeholder="Old column name" />
             </FormGroup>

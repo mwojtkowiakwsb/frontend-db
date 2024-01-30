@@ -5,7 +5,11 @@ import { useParams } from "react-router";
 
 const conditionData = {
   category: ['category_id'],
-  review: ['user_id', 'product_id']
+  review: ['user_id', 'product_id'],
+  user: ['user_id'],
+  product: ['product_id'],
+  shoporder: ['order_id', 'user_id'],
+  orderitem: ['order_id', 'product_id']
 }
 
 const EditFormModal = ({ show, handleClose, brickName, data, setRows }) => {
@@ -24,7 +28,7 @@ const EditFormModal = ({ show, handleClose, brickName, data, setRows }) => {
       })
       return conditionDataObj;
     }
-
+    console.log(formData);
     const handleSubmit = async (event) => {
       event.preventDefault();
       await fetch(`http://localhost:3000/api/row/${params.table}`, {method: "PUT", body: JSON.stringify({data: formData, conditionData: buildConditionData()}), headers: { 'Content-Type': 'application/json'} });
@@ -75,7 +79,7 @@ const EditFormModal = ({ show, handleClose, brickName, data, setRows }) => {
       </Modal.Body>
       <Modal.Footer className="footerClass">
         <Button onClick={handleClose}>Close</Button>
-        <Button onClick={(event) => handleSubmit(event)} type="submit">Add</Button>
+        <Button onClick={(event) => handleSubmit(event)}>Add</Button>
       </Modal.Footer>
     </Modal>
     );
